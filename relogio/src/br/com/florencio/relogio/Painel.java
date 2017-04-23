@@ -38,8 +38,6 @@ public class Painel extends JPanel {
 
 		@Override
 		public void run() {
-			relogio.config();
-
 			while (true) {
 				Calendar c = Calendar.getInstance();
 				montarString(c);

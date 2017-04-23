@@ -5,13 +5,10 @@ import java.util.Calendar;
 
 public abstract class Ponteiro {
 	Vetor vetor;
-	int ultimo;
 
 	Ponteiro(int comprimento) {
 		vetor = new Vetor(0, -comprimento);
 	}
-
-	abstract void config(Calendar c);
 
 	abstract void atualizar(Calendar c);
 

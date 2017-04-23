@@ -4,12 +4,21 @@ import static java.lang.Math.PI;
 
 public class Vetor {
 	final double rad = PI / 180;
+	float a;
+	float b;
 	float x;
 	float y;
 
 	Vetor(float x, float y) {
 		this.x = x;
 		this.y = y;
+		a = x;
+		b = y;
+	}
+
+	void reiniciar() {
+		x = a;
+		y = b;
 	}
 
 	void rotacionar(int grau) {

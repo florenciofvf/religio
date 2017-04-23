@@ -13,23 +13,14 @@ public class Hora extends Ponteiro {
 	@Override
 	void atualizar(Calendar c) {
 		int hor = c.get(Calendar.HOUR);
-		if (hor != ultimo) {
-			ultimo = hor;
-			vetor.rotacionar(30);
-		}
+		vetor.reiniciar();
+		vetor.rotacionar(hor * 30);
 	}
 
 	@Override
 	public void desenhar(Graphics2D g2, int x, int y) {
 		g2.setStroke(new BasicStroke(3f));
 		g2.drawLine(x, y, (int) (x + vetor.x), (int) (y + vetor.y));
-	}
-
-	@Override
-	void config(Calendar c) {
-		int hor = c.get(Calendar.HOUR);
-		ultimo = hor;
-		vetor.rotacionar(hor * 30);
 	}
 
 }
